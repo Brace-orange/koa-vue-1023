@@ -1,0 +1,425 @@
+.pro-act-detail{
+  position: relative;
+  padding-bottom: rem(126);
+  background: #f4f4f4;
+  .act-detail{
+    background: #fff;
+    .goods-img{
+      display: block;
+      width: rem(200);
+      height: rem(200);
+      flex: 0 0 auto;
+    }
+     // 商品信息卡片
+    .goods-detail{
+      display: flex;
+      padding: rem(30) 0;
+      margin:0 rem(30);
+      @include border(bottom, #ededed);
+      .goods-info{
+        // 垂直flex
+        margin-left: rem(30);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .goods-name{
+          font-size: rem(32);
+          color:#333;
+          // height: rem(80);
+          line-height: rem(40);
+          @include ellipsis(2);
+          .relation-icon{
+            padding:1px rem(12);
+            color:#FF5747;
+            background: #ffeeee;
+            border-radius: rem(15);
+            font-size: rem(20);
+            margin-right: rem(10);
+          }
+        }
+        .remain-count{
+          margin-top: rem(15);
+          color:#666;
+          font-size: rem(26);
+          span{
+            color:#121212;
+            font-size: rem(30);
+            margin-left: rem(8);
+          }
+        }
+        .goods-price{
+          // margin-top: rem(12);
+          color:#666;
+          font-size: rem(24);
+          span.act-price{
+            font-size: rem(36);
+            color:#DE302E;
+            margin-left: rem(8);
+            i{
+              font-size: rem(20);
+              vertical-align: baseline;
+            }
+          }
+          span.original-price{
+            margin-left: rem(17);
+            color: #999;
+            font-size: rem(26);
+            text-decoration: line-through;
+            i{
+              vertical-align: 0;
+              font-size: rem(20);
+            }
+          }
+        }
+      }
+    }
+    // 活动详细信息
+    .act-info{
+      margin-top: rem(20);
+      .detail-ul{
+        padding: rem(20) rem(30) 0;
+        li{
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          font-size: rem(28);
+          color: #333333;
+          margin-bottom: rem(27);
+          line-height: rem(38);
+          .item-title{
+            color:#666;
+          }
+          .item-content{
+            display:flex;
+            flex-grow:1;
+            flex-wrap:wrap;
+            text-align: right;
+            word-break: break-word;
+            justify-content: flex-end;
+            max-width: rem(450);
+            .ticket-item{
+              width:100%;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow:ellipsis;
+            }
+          }
+          .content-nowrap{
+            white-space: nowrap;
+          }
+          .item-content-expand{
+            display: inline;
+            max-width: rem(350);
+            text-align: left;
+            justify-content: flex-start;
+            @include ellipsis();
+          }
+          .content-arr{
+            position: absolute;
+            right:0;
+            top:rem(12);
+            content: '';
+            width: rem(24);
+            height: rem(24);
+            background: url(https://cmspic-10004025.image.myqcloud.com/6/6fa2f720-c4d5-11e9-a212-27140531d0ec_size_24x24) no-repeat;
+            background-size: contain;
+          }
+          .content-arr-down{
+            background: url(https://cmspic-10004025.image.myqcloud.com/6/6fa2f720-c4d5-11e9-a212-27140531d0ec_size_24x24) no-repeat;
+            background-size: contain;
+            transform: rotateX(180deg);
+            top:rem(8);
+          }
+          .act-status{
+            flex:0 auto;
+            border-radius: rem(18);
+            padding:0 rem(18);
+            height: rem(36);
+            line-height: normal;
+            align-items: center;
+            justify-items: center;
+            font-size: rem(24);
+            color:#fff;
+            background: linear-gradient(to right,#FF7D46,#FF4B4B); 
+          }
+        }
+        .li-up{
+          padding-right: rem(20);
+        }
+        .li-down{
+          padding-right: rem(40);
+        }
+        li.graphic-link{
+          position: relative;
+          .item-content{
+            padding-right:rem(30);
+            &::after{
+              position: absolute;
+              content: '';
+              right: 0;
+              top:50%;
+              margin-top: rem(-12);
+              width: rem(24);
+              height: rem(24);
+              background: url(https://cmspic-10004025.image.myqcloud.com/dae88890-bd70-11e9-8cfa-fd417ec8c3b3_size_24x24) no-repeat;
+              background-size: rem(24) rem(24);
+            }
+          }
+        }
+      }
+      .more-detail{
+        text-align: center;
+        padding-bottom: rem(24);
+        height:rem(100);
+        padding-top: rem(25);
+        span{
+          height:rem(60);
+          padding:rem(11) rem(24);
+          background: #f4f6f9;
+          border-radius: rem(30);
+          color:#666;
+          font-size: rem(28);
+          &::after {
+            display: inline-block;
+            position: relative;
+            content: '';
+            // top: 3px;
+            width: rem(18);
+            height: rem(18);
+            margin-left: rem(10);
+            // background: url(https://cmspic-10004025.image.myqcloud.com/dae38e30-1f7d-11e9-99fb-1d50518648b0_size_64x64) no-repeat center;
+            background:url(https://cmspic-10004025.image.myqcloud.com/6c1cb4a0-a1f9-11e9-826e-c372455107c8_size_18x18) no-repeat center;
+            background-size: rem(18) rem(18);
+          }
+        }
+        span.active{
+          &::after {
+            background-image: url(https://cmspic-10004025.image.myqcloud.com/6c1cb4a0-a1f9-11e9-826e-c372455107c8_size_18x18);
+            transform: rotateX(180deg);
+          }
+        }
+      }
+    }
+  }
+  // 数据统计
+  .act-data{
+    padding:rem(30);
+    background: #fff;
+    margin-top:rem(24);
+    h2{
+      line-height: rem(40);
+      font-size: rem(32);
+      height:rem(40);
+      color:#333;
+      background: url(https://cmspic-10004025.image.myqcloud.com/bd53e680-b50f-11e9-8697-29b2f530c616_size_30x30) 0 center no-repeat;
+      background-size: rem(32) auto;
+      padding-left: rem(42);
+    }
+    .income{
+      margin-top: rem(30);
+      position: relative;
+      height:rem(180);
+      text-align: center;
+      background: #FFF3F1;
+      border-radius: rem(12);
+      padding-top:rem(26);
+      &::after{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        content: '';
+        width:rem(57);
+        height: rem(50);
+        background: url(https://cmspic-10004025.image.myqcloud.com/c9f13680-b515-11e9-8697-29b2f530c616_size_57x50) no-repeat;
+        background-size: contain;
+      }
+      .tit{
+        color:#666;
+        font-size: rem(24);
+      }
+      .price{
+        font-size: rem(32);
+        line-height: rem(54);
+        color:#333;
+        em{
+          vertical-align: baseline;
+          .yen{
+            font-size: rem(24);
+            vertical-align: baseline;
+          }
+        }
+        em.red{
+          color: #FF5747;
+          font-size: rem(40);
+          margin-right: rem(9);
+        }
+        em.normal{
+          .yen{
+            margin-left: rem(8);
+          }
+        }
+      }
+      .link{
+        color: #FF892C;
+        font-size: rem(24);
+      }
+    }
+    .other-data{
+      margin-top: rem(30);
+      .group-count {
+        display: flex;
+        display: -webkit-flex;
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        // padding: rem(30) rem(30) 0;
+        background: #fff;
+        li {
+          background: #f4f6f9;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: rem(330);
+          height: rem(180);
+          margin-bottom: rem(30);
+          border-radius: rem(8);
+          color: #333;
+          font-size: rem(24);
+          .num {
+            // margin-top: rem(16);
+            line-height: rem(54);
+            font-size: rem(28);
+            color: #636363;
+            em{
+              vertical-align: baseline;
+            }
+            em.red{
+              color: #FF5747;
+              font-size: rem(40);
+              margin-right: rem(9);
+            }
+          }
+          &.nav {
+            .num {
+              font-size: rem(38);
+            }
+            .link {
+              color:#FF892C;
+              font-size: rem(24);
+            }
+          }
+          .num-o{
+            font-size: rem(40);
+            color:#333;
+          }
+          &::after{
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            content: '';
+            width:rem(57);
+            height: rem(50);
+          }
+        }
+        .partake-num{
+          &::after{
+            background: url(https://cmspic-10004025.image.myqcloud.com/046348a0-b82f-11e9-9b17-45c912d9f3b3_size_57x50) no-repeat;
+            background-size: contain;
+          }
+        }
+        .groups-num{
+          &::after{
+            background: url(https://cmspic-10004025.image.myqcloud.com/a25e4380-b518-11e9-8697-29b2f530c616_size_57x50) no-repeat;
+            background-size: contain;
+          }
+        }
+        .bargain-num{
+          &::after{
+            background: url(https://cmspic-10004025.image.myqcloud.com/6/44677a40-ceb7-11e9-b43e-413fce12c785_size_57x50) no-repeat;
+            background-size: contain;
+          }
+        }
+        .verify-order{
+          &::after{
+            background: url(https://cmspic-10004025.image.myqcloud.com/e616b080-b518-11e9-8697-29b2f530c616_size_57x50) no-repeat;
+            background-size: contain;
+          }
+        }
+        .remain-num{
+          &::after{
+            background: url(https://cmspic-10004025.image.myqcloud.com/14a135b0-b519-11e9-8697-29b2f530c616_size_57x50) no-repeat;
+            background-size: contain;
+          }
+        }
+        .nav{
+          &::after{
+            background: url(https://cmspic-10004025.image.myqcloud.com/cd513b10-b82e-11e9-9b17-45c912d9f3b3_size_57x50) no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+  .more-receipt-tip{
+    text-align: center;
+    padding:rem(28) 0 rem(38) 0;
+    font-size: rem(24);
+    color:#666;
+  }
+  // 底部按钮
+  .btn-bottom-box{
+    display: flex;
+    justify-content: space-around;
+    height:rem(126);
+    border-top: 1px solid #EEE;
+    .btn-common{
+      text-align: center;
+      font-size:rem(20);
+      color:#666;
+      p{
+        margin-top:rem(10)
+      }
+    }
+    .btn-record{
+      i{
+        display: inline-block;
+        width:rem(44);
+        height:rem(47);
+        background: url(https://cmspic-10004025.image.myqcloud.com/0c15fc70-b51c-11e9-8697-29b2f530c616_size_44x47) no-repeat;
+        background-size: contain;
+      }
+    }
+    .btn-newuser{
+      i{
+        display: inline-block;
+        width:rem(44);
+        height:rem(47);
+        background: url(https://cmspic-10004025.image.myqcloud.com/2b377fc0-b51c-11e9-8697-29b2f530c616_size_44x47) no-repeat;
+        background-size: contain;
+      }
+    }
+    .btn-modify{
+      i{
+        display: inline-block;
+        width:rem(44);
+        height:rem(47);
+        background: url(https://cmspic-10004025.image.myqcloud.com/33d9bc10-b51c-11e9-8697-29b2f530c616_size_44x47) no-repeat;
+        background-size: contain;
+      }
+    }
+    .btn-pause{
+      i{
+        display: inline-block;
+        width:rem(44);
+        height:rem(47);
+        background: url(https://cmspic-10004025.image.myqcloud.com/3c1fa790-b51c-11e9-8697-29b2f530c616_size_44x47) no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}

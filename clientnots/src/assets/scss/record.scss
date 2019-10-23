@@ -1,0 +1,321 @@
+.act-record{
+  position: relative;
+  min-height: 100%;
+  background: #f4f4f4;
+  .van-tabs{
+    .van-tabs__wrap{
+      box-shadow: none;
+      // @include border(bottom, #dedede);
+      // border-bottom: 1px solid #dbdbdb;
+    }
+    .van-tab{
+      align-items: center;
+      justify-content: center;
+      color:#121212;
+      @include border(bottom, #ededed);
+    }
+   .van-tabs__line{
+      background: linear-gradient(90deg, #FF4B4B ,#FF7D46);
+    }
+    .van-tab--active{
+      color: #FF5747;
+      font-size: rem(28);
+    }
+  }
+  .filter-content{
+    position: relative;
+    padding-top: rem(90);
+  }
+  .filter{
+    position: fixed;
+    width:100%;
+    top:rem(90);
+    background: #fff;
+    display: flex;
+    padding:0 rem(20);
+    z-index: 10;
+    li{
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: rem(88);
+      line-height: rem(88);
+      text-align: center;
+      justify-items: center;
+      // max-width: rem(300);
+      span{
+        display: inline-block;
+        max-width: 80%;
+        @include ellipsis();
+        font-size: rem(28);
+      }
+      &::after{
+        display: inline-block;
+        position: relative;
+        content: '';
+        top: rem(1);
+        width: rem(18);
+        height: rem(18);
+        margin-left: rem(10);
+        background: url(https://cmspic-10004025.image.myqcloud.com/6c1cb4a0-a1f9-11e9-826e-c372455107c8_size_18x18) no-repeat center;
+        background-size: rem(18) rem(18);
+      }
+    }
+  }
+  .order-sum{
+    font-size: rem(26);
+    color:#666;
+    padding:rem(25) rem(30) rem(18);
+    em{
+      color: #ff5747;
+    }
+  }
+  // 用户参与记录
+  .record-list{
+    .item{
+      background: #FFFFFF;
+      box-shadow: 0 0 rem(15) 0 rgba(238,238,238,0.50);
+      border-radius: rem(12);
+      margin:0 rem(30) rem(30);
+      padding:rem(24);
+      padding-bottom:0;
+      .item-href{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .order-info{
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+        padding-bottom: rem(24);
+        .user-info{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          img{
+            display: block;
+            height: rem(100);
+            width: rem(100);
+            overflow: hidden;
+            border-radius: 50%;
+          }
+          .box{
+            margin-left: rem(20);
+          }
+        }
+        .box{
+          .user-name{
+            font-size: rem(30);
+            color:#121212;
+          }
+          .phone{
+            color:#333;
+            font-size: rem(24);
+          }
+        }
+        .status{
+          color: #FF5747;
+          font-size: rem(26);
+          text-align: right;
+          padding-top: rem(7);
+          .desc{
+            color:#666;
+          }
+          .desc.valid{
+            color:#FF5747;
+          }
+          .tips{
+            font-size: rem(24);
+            color:#FF892C;
+          }
+          div{
+            white-space: nowrap;
+          }
+        }
+      }
+      .store-time{
+        @include border(top, #dbdbdb);
+        color:#333;
+        font-size: rem(26);
+        padding:rem(29) 0;
+        i{
+          margin-right: rem(10);
+        }
+        .store-name{
+          i{
+            color: #FF5747;
+          }
+        }
+        .order-time{
+          margin-top: rem(8);
+          i{
+            color: #FF892C;
+          }
+          .high-light{
+            color:#ff5747;
+          }
+          span{
+            display: inline-block;
+            vertical-align: middle;
+            em{
+              vertical-align: middle;
+            }
+          }
+        }
+        .status-tip{
+          display: inline-block;
+          width:rem(26);
+          height: rem(26);
+          margin-left: rem(12);
+          background: url(https://cmspic-10004025.image.myqcloud.com/6/27daa920-db7c-11e9-924d-21df48ef4930_size_26x26) no-repeat;
+          background-size: rem(26) rem(26);
+        }
+      }
+    }
+  }
+  .record-nosum-list{
+    margin-top: rem(30);
+  }
+  .statistic {
+    margin-bottom: rem(20);
+    padding: rem(20) rem(36);
+    overflow: hidden;
+    background: #FFF;
+    li {
+      float: left;
+      width: 50%;
+      line-height: 3;
+      font-size: rem(28);
+      .count {
+        margin-left: rem(10);
+        color: #ff5747;
+      }
+      a {
+        margin-left: rem(10);
+        color: #2272CB;
+      }
+    }
+  }
+  // 收入统计订单列表
+  .record-income-list{
+    background: #fff;
+    .item {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      height: rem(120);
+      margin: 0 rem(30);
+      padding: rem(25) 0;
+      border-bottom: 1px solid #ededed;
+      overflow: hidden;
+      line-height: rem(36);
+      &:last-child {
+        border: none;
+      }
+      .user-info {
+        display: flex;
+        align-items: center;
+        .avator {
+          width: rem(70);
+          height: rem(70);
+          border-radius: 50%;
+          overflow: hidden;
+          .img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .box {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: rem(25);
+          .user-name {
+            max-width: rem(200);
+            font-size: rem(28);
+            @include ellipsis();
+          }
+          .phone {
+            font-size: rem(24);
+            color: #666;
+          }
+        }
+      }
+      .status {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        .desc {
+          font-size: rem(28);
+        }
+        .tips {
+          font-size: rem(24);
+          color: #539606;
+          &.fail {
+            color: #FFB900;
+          }
+        }
+      }
+      .pay-status {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .sign {
+          display: inline-block;
+          width: rem(18);
+          text-align: center;
+        }
+      }
+    }
+  }
+  .is-empty{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #999;
+    padding-top:rem(900);
+    text-align: center;
+    font-size: rem(28);
+    transform: translate(-50%, -50%);
+
+    &::before {
+      content: '';
+      width: rem(300);
+      height: rem(300);
+      display: block;
+      margin: 0 auto rem(22);
+      background: url(https://cmspic-10004025.image.myqcloud.com/e4fdc110-b505-11e9-8697-29b2f530c616_size_300x300) no-repeat;
+      background-size: contain;
+    }
+  }
+}
+.statistics-time-popup{
+  .btn-area{
+    .van-button{
+      width:rem(690);
+      border:0 none;
+      background: linear-gradient(90deg, #FF4B4B ,#FF7D46);
+    }
+  }
+}
+
+.status-filter-popup{
+  transition: none;
+  top:rem(178);
+}
+.status-filter-overlay{
+  margin-top:rem(178);
+}
+.store-filter-popup{
+  top:rem(178);
+  transition: none;
+  // padding-bottom:rem(178);
+  max-height: 60%;
+}
+.store-filter-overlay{
+  margin-top: rem(178);
+}
