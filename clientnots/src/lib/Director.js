@@ -19,7 +19,8 @@ class Director {
 
   run () {
     console.log('enter director function-run')
-      const backgroundSprite = this.dataStore.get('background').draw()
+      // const backgroundSprite = this.dataStore.get('background').draw()
+      const flyPig = this.dataStore.get('pig1').draw()
       // const timer = requestAnimationFrame(() => {
       //   this.run()
       // })

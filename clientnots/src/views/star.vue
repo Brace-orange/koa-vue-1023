@@ -1,15 +1,6 @@
 <template>
   <div class="animations">
-    <!-- <img src="../assets/image/dog.jpg"/> -->
-    <div>
-      <p>展示为：''</p>
-      <p class="spans" v-for="(item, index) in abnormalValue" :key="index">{{item + ''}}:{{disposeNull(item, '默认')}}</p>
-    </div>
-    <div>
-      <p>展示为：0</p>
-      <p class="spans" v-for="(item, index) in abnormalValue" :key="index">{{item + ''}}:{{disposeNull(item, 0)}}</p>
-    </div>
-    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <canvas id="myCanvas" :width="width" :height="height"></canvas>
   </div>
 </template>
 <script>
@@ -17,18 +8,8 @@ import Mains from '../lib/mains'
 export default {
   data() {
     return {
-      abnormalValue: [
-        null,
-        undefined,
-        'null',
-        'undefined',
-        '',
-        0,
-        '0',
-        -1,
-        'aa',
-        1,
-      ]
+      height: document.body.clientHeight,
+      width: document.body.clientWidth
     }
   },
   mounted() { // created 还未创建dom
@@ -54,6 +35,7 @@ export default {
   width: 100%;
   // background: url('../assets/image/bac1.jpg');
   background-size: 100%;
+  background-color: #333;
   .spans {
     color: red;
   }
