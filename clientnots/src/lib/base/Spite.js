@@ -9,10 +9,8 @@ class Sprite {
     width = 0, height = 0) {
       this.dataStore = DataStore.getInstance()
       this.ctx = this.dataStore.ctx
-      console.log('this.dataStore.ctx=', this.dataStore.ctx)
       // this.ctx = ctx
       this.img = img;
-      console.log(this.img, 5555555)
       this.srcX = srcX;
       this.srcY = srcY;
       this.srcW = srcW;

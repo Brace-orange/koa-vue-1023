@@ -33,8 +33,9 @@ export default class Main{
   init () {
     console.log('enter main init')
     this.dataSource
+    .put('pigsTotal', [])
     .put('background', Background)
-    .put('pig1', FlyPig)
+    .put('pig1', new FlyPig([]))
     this.director.run()
   }
 }
