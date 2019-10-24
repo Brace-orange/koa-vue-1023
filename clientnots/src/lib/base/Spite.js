@@ -30,7 +30,6 @@ class Sprite {
     y = this.y,
     width = this.width,
     height = this.height) {
-      console.log(img, '444444444')
       this.ctx.drawImage(
         img,
         srcX,

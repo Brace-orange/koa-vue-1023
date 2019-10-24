@@ -1,6 +1,7 @@
 import ResorcesLoader from './base/ResourceLoader.js'
 import Director from './Director.js'
 import Background from './runtime/Background.js'
+import DogOne from './runtime/dogone'
 import FlyPig from './runtime/flyPig.js'
 // import Land from './js/runtime/Land.js'
 import DataStore from './base/DataStore.js'
@@ -35,6 +36,7 @@ export default class Main{
     this.dataSource
     .put('pigsTotal', [])
     .put('background', Background)
+    .put('dog1', DogOne)
     .put('pig1', new FlyPig([]))
     this.director.run()
   }

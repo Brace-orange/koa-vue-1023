@@ -24,7 +24,13 @@ class Director {
 
 
   run () {
-    if (this.counts > 1000) {
+    if (this.counts > 300) {
+      this.ctx.clearRect(0, 0, document.body.clientWidth,document.body.clientHeight)
+    setTimeout(() => {
+      console.log('22222fdfdfdf')
+      cancelAnimationFrame(timer)
+      this.dataStore.get('dog1').draw()
+    }, 3000)
       return
     }
     // this.count = 0
@@ -39,8 +45,8 @@ class Director {
     this.obj = {
       imgwidth:this.imgwidth, imgheight: this.imgheight, width: this.width, height: this.height, x: this.x, y: this.y
   }
-    if (this.dataStore.get('pigsTotal').length < 1) {
-      console.log(this.obj,111111)
+    if (this.dataStore.get('pigsTotal').length < 5) {
+      // console.log(this.obj,111111)
       const a = new FlyPig(this.obj)
       this.dataStore.get('pigsTotal').push(a)
     }
@@ -51,18 +57,16 @@ class Director {
       // if (this.counts < 9) {
         // cancelAnimationFrame(timer)
         this.dataStore.get('pigsTotal').map((item) => {
-          console.log(item.y,1090909)
+          // console.log(item.y,1090909)
           if (this.a !== 0) {
             
             item.y = item.y + 10
             item.draw()
           } else {
             // item.draw()
-            console.log(item.y, 898989)
           }
         })
       // this.dataStore.get('pigsTotal')[this.count].draw()
-      console.log(this.dataStore.get('pigsTotal'))
       const timer = window.requestAnimationFrame(() => {
         this.run()
       })

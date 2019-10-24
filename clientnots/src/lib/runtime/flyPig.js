@@ -18,9 +18,9 @@ export default class FlyPig extends Sprite {
             this.y = obj.y
     }
     draw() {
-        console.log(this.obj, 66666)
-        console.log(this.obj.x, 88)
-        this.obj.y = this.obj.y + 0.5
+        this.obj.y = this.obj.y + Math.random()*1+0.5
+        // this.obj.x = this.obj.x > 400 ? this.obj.x - Math.random()*2 : this.obj.x + Math.random()*2
+        // this.obj.x = this.obj.x + 2
         // this.x = this.x + 20
         super.draw(this.image,
             0, 0,
