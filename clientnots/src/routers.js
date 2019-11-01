@@ -15,6 +15,10 @@ const views = [
   {
     path: 'value',
     title: '判断值'
+  },
+  {
+    path: 'grid',
+    title: '网格布局'
   }
 ]
 
