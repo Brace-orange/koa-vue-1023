@@ -1,7 +1,7 @@
 <template>
   <div>
     <m-header></m-header>
-    <div is="mHeader" ref="parent" count=1 @changeCount="getCount">{{total}}</div>
+    <div is="mHeader" ref="parent" :count="total" @changeCount="getCount">{{total}}</div>
   </div>
 </template>
 <script>
