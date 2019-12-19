@@ -11,5 +11,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import './assets/scss/mixin.scss';
+div {
+  font-size: rem(10);
+}
 </style>

@@ -19,6 +19,10 @@ const views = [
   {
     path: 'grid',
     title: '网格布局'
+  },
+  {
+    path: 'header',
+    title: '组件'
   }
 ]
 
