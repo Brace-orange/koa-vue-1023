@@ -12,6 +12,7 @@ import './plugins/requestAnimationFrame'
 Vue.config.productionTip = false
 
 Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 };
+Vue.prototype.vm = new Vue()
 Vue.use(middleware)
 Vue.use(Button)
 Vue.component(Select.name, Select)

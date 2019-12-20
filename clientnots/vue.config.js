@@ -22,7 +22,7 @@ module.exports = {
     loaderOptions: {
       // 给 sass-loader 传递选项
       sass: {
-        prependData: `@import "./assets/scss/mixin.scss";`,
+        prependData: `@import "./src/assets/scss/mixin.scss";`,
       },
     },
   },  
