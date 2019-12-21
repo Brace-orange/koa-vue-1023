@@ -8,6 +8,8 @@ import { Button, Select } from 'element-ui'
 import './assets/scss/base.scss'
 import './assets/scss/common.scss'
 import './plugins/requestAnimationFrame'
+import animated from 'animate.css'
+// import Velocity from 'velocity-animate'
 
 Vue.config.productionTip = false
 
@@ -16,6 +18,8 @@ Vue.prototype.vm = new Vue()
 Vue.use(middleware)
 Vue.use(Button)
 Vue.component(Select.name, Select)
+Vue.use(animated)
+// Vue.install(Velocity)
 
 new Vue({
   router,
