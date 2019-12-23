@@ -1,6 +1,6 @@
 <template>
   <div>
-    <m-header @click.native="nativeFunc">
+    <!-- <m-header @click.native="nativeFunc">
       <template v-slot:default="slotone">{{slotone.user.name}}</template>
       <template v-slot:slottwo="slottwo">1</template>
     </m-header>
@@ -18,7 +18,6 @@
     >
       <div v-if="show" :key="1">这是一个过渡</div>
       <div v-if="!show" :key="2">121212</div>
-      <!-- <component></component> -->
     </transition>
     <transition-group name="group" tag="div"
       appear
@@ -30,8 +29,9 @@
     <button @click="toClick">点击</button>
     <button @click="addNum">添加</button>
     <button @click="removeNum">减少</button>
-    <button @click="shuffleNum">移动</button>
+    <button @click="shuffleNum">移动</button> -->
     <!-- <div is="mHeader" ref="parent" :count="total" @changeCount="getCount">{{total}}</div> -->
+    <div class="ceshitop" ref="ceshitop">测试top(1.1ms) translate()</div>
   </div>
 </template>
 <script>
@@ -48,12 +48,17 @@ export default {
     }
   },
   components: {
-    mHeader
+    // mHeader
   },
   created() {
-
   },
   mounted() {
+    
+    setTimeout(() => {
+      console.log('change top')
+      this.$refs.ceshitop.style.top = '100px'
+      // this.$refs.ceshitop.style.transform = 'translateY(100px)'
+    }, 1000)
     // console.log('son', this.$refs.one)
     // console.log('parent', this.$refs.parent.$refs.one.innerHTML)
   },
@@ -92,6 +97,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../assets/scss/mixin.scss';
+.ceshitop {
+  position: relative;
+  top: 0;
+  transform: translateY(0);
+  background: yellow;
+}
 .leave-leave-active {
   // position: absolute;
 }
@@ -113,7 +124,7 @@ export default {
 .v-enter-active {
   transition: opacity 3s;
   animation: bounce 3s;
-  transform-origin: left center;,
+  transform-origin: left center;
 }
 .v-enter-to {
   opacity: 1;
